@@ -1,0 +1,64 @@
+{
+  "name": "firma-not-defteri-react",
+  "version": "1.0.0",
+  "description": "Firmalar için not ve belge yönetim uygulaması.",
+  "main": "main.js",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-react": "^11.0.0",
+    "ckeditor5": "^46.0.0",
+    "electron-is-dev": "^2.0.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron:start": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:package": "npm run build && electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^28.2.3",
+    "electron-builder": "^24.9.1",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.guldururcpa.muhasebenotdefteri",
+    "productName": "Firma Not Defteri",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

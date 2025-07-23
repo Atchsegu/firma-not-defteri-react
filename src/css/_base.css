@@ -1,0 +1,72 @@
+/* --- GLOBAL AYARLAR, RENK PALETİ VE TEMEL STİLLER --- */
+:root {
+    /* Genel ve Arka Plan Renkleri */
+    --primary-bg: #f7f8fc;              /* Ana arka plan için çok açık, neredeyse beyaz bir mavi tonu */
+    --sidebar-bg: #ffffff;              /* Sidebar ve ana içerik paneli için saf beyaz */
+    --content-bg: #ffffff;              /* Modal gibi diğer içerik alanları için de saf beyaz */
+
+    /* Metin Renkleri */
+    --text-color: #5a6a85;              /* Normal metinler için daha yumuşak bir arduvaz grisi */
+    --heading-color: #1e293b;           /* Başlıklar için daha belirgin, koyu bir arduvaz grisi */
+
+    /* Ana Marka Renkleri (Canlı Mavi) */
+    --primary-color: #4f46e5;           /* Ana renk olarak modern ve canlı bir mavi */
+    --primary-hover: #4338ca;           /* Hover durumu için bir ton koyu mavi */
+    
+    /* İkincil ve Diğer Renkler */
+    --secondary-color: #64748b;         /* İkincil butonlar için nötr bir gri */
+    --secondary-hover: #475569;         /* Hover durumu için bir ton koyusu */
+    --danger-color: #ef4444;            /* Tehlike rengi için canlı bir kırmızı */
+    --danger-hover-bg: #dc2626;         /* Hover durumu için bir ton koyusu */
+    
+    /* Kenarlık ve Form Elemanları */
+    --border-color: #e2e8f0;            /* Tüm kenarlıklar için yumuşak bir gri */
+    --input-focus-border: rgba(79, 70, 229, 0.25); /* Odaklanılan input kenarlığı için ana renk */
+    --input-focus-shadow: rgba(79, 70, 229, 0.25); /* Odaklanma gölgesi için ana rengin şeffaf hali */
+
+    /* Aktif Eleman Renkleri */
+    --active-item-bg: var(--primary-color);
+    --active-item-text: #ffffff;
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+body { 
+    margin: 0; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    background-color: var(--primary-bg); 
+    color: var(--text-color); 
+    display: flex; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+h2, h3, h4 { 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 12px; 
+    margin-top: 0; 
+    margin-bottom: 25px; 
+    color: var(--heading-color); 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+hr { 
+    margin-top: 30px; 
+    margin-bottom: 30px; 
+    border: 0; 
+    border-top: 1px solid var(--border-color); 
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+#root, .container {
+    height: 100%;
+    display: flex;
+    flex: 1;
+}

@@ -1,0 +1,11 @@
+/*
+ * MUHASEBECİ NOT DEFTERİ ANA STİL DOSYASI
+ * Bu dosya, diğer tüm CSS parçalarını birleştirir.
+ * Stil düzenlemeleri için lütfen ilgili alt dosyaları (_base, _components, vb.) düzenleyin.
+*/
+
+@import url('_base.css');
+@import url('_layout.css');
+@import url('_components.css');
+@import url('_views.css');
+@import url('../components/EtiketInput/EtiketInput.css'); /* YENİ EKLENDİ */

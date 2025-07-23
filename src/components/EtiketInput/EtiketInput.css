@@ -1,0 +1,77 @@
+.etiket-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.etiket-input-container:focus-within {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 0.2rem var(--input-focus-shadow);
+}
+
+.etiket-input-container input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 4px;
+    font-size: 16px;
+    margin: 0;
+    min-width: 150px;
+}
+
+.etiket {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.etiket button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.7;
+}
+.etiket button:hover {
+    opacity: 1;
+}
+
+/* Genel etiket listeleri için stil */
+.etiket-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+.etiket-listesi .etiket {
+    background-color: #e9ecef;
+    color: var(--text-color);
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+/* Firma Detayındaki Etiket Yönetim Alanı */
+.etiket-yonetim-alani {
+    margin-bottom: 20px;
+}
+.etiket-yonetim-alani label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--heading-color);
+    font-size: 14px;
+}

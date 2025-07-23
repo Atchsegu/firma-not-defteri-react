@@ -1,0 +1,209 @@
+/* --- GÖRÜNÜME ÖZEL STİLLER --- */
+
+/* Sidebar Liste Stilleri */
+#genel-menu { list-style: none; padding: 0; }
+#genel-menu li { 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    margin-bottom: 6px; 
+    cursor: pointer; 
+    font-weight: 500; 
+    transition: background-color 0.2s, color 0.2s, transform 0.1s; 
+    border: 1px solid transparent;
+}
+#genel-menu li:hover { 
+    background-color: #f1f5f9;
+    color: var(--primary-hover);
+}
+#genel-menu li.active { 
+    background-color: var(--primary-color); 
+    color: var(--active-item-text); 
+    font-weight: 600; 
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+}
+#genel-menu li:active {
+    transform: scale(0.98); /* Tıklama efekti */
+}
+
+#firma-listesi { list-style: none; padding: 0; margin: 0; }
+#firma-listesi li { 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    margin-bottom: 6px; 
+    cursor: pointer; 
+    font-weight: 500; 
+    transition: background-color 0.2s, color 0.2s; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    border: 1px solid transparent; 
+}
+#firma-listesi li:hover { background-color: #f1f5f9; }
+#firma-listesi li.active { 
+    background-color: var(--primary-color); 
+    color: var(--active-item-text); 
+    font-weight: 600; 
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+}
+
+/* Ana İçerik Liste Stilleri */
+#not-listesi, .arama-sonuc-listesi-grup { list-style: none; padding: 0; }
+#not-listesi li, .arama-sonuc-listesi-grup .arama-sonuc-item { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px; 
+    border-radius: 10px; /* Daha yuvarlak köşeler */
+    margin-bottom: 10px; /* Liste elemanları arasına daha fazla boşluk */
+    transition: all 0.2s ease-in-out; 
+    border: 1px solid #e9ecef;
+    background-color: #fff;
+}
+#not-listesi li:hover, .arama-sonuc-listesi-grup .arama-sonuc-item:hover { 
+    background-color: #f8f9fa;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+#not-listesi .not-basligi { cursor: pointer; font-weight: 500; flex-grow: 1; }
+#not-listesi .not-detay-sol { flex-grow: 1; } /* Not başlığı ve etiketleri sarmak için */
+#not-listesi .not-aksiyonlari button { padding: 6px 10px; font-size: 13px; margin-left: 5px; line-height: 1.5; border-radius: 6px; }
+
+/* Kişi Yönetim Paneli Stilleri */
+.kisi-yonetim-alani h4 { border: none; margin-bottom: 10px; }
+#kisi-ekle-formu { display: flex; gap: 10px; margin-top: 20px; }
+#kisi-ekle-formu input { margin-bottom: 0; }
+#kisi-listesi-yonetim { list-style: none; padding: 0; margin-bottom: 20px; }
+#kisi-listesi-yonetim li { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 8px; }
+#kisi-listesi-yonetim li:nth-child(odd) { background-color: #f8f9fa; }
+#kisi-listesi-yonetim button { padding: 4px 8px; font-size: 12px; }
+
+/* Not Çalışma Alanı Stilleri */
+.workspace-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.workspace-header-title h2 { border: none; margin-bottom: 5px; }
+.workspace-header-title p { margin: 0; color: #6c757d; font-weight: 500; }
+
+.note-preview { margin-top: 15px; padding: 20px; border: 1px solid var(--border-color); border-radius: 8px; min-height: 100px; background-color: #f8f9fa; white-space: pre-wrap; line-height: 1.6; }
+.note-preview:hover { border-color: var(--primary-color); }
+.note-preview a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+.note-preview a:hover { text-decoration: underline; }
+
+/* Belge Listesi Stilleri */
+#belge-listesi { list-style: none; padding: 0; }
+#belge-listesi li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+#belge-listesi li:hover {
+    background-color: #f1f5f9;
+}
+#belge-listesi .belge-adi {
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+#belge-listesi .belge-adi:hover {
+    color: var(--primary-color);
+}
+.belge-aksiyonlari {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.belge-aksiyonlari button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 18px; /* İkonları büyüttük */
+    color: #94a3b8; /* Daha yumuşak ikon rengi */
+    border-radius: 50%; /* Butonları yuvarlak yaptık */
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.belge-aksiyonlari button:hover {
+    background-color: #e9ecef;
+    color: var(--primary-color);
+}
+
+/* Arama Sonuçları Stilleri */
+.arama-sonuc-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.arama-icon {
+    font-size: 1.8em; /* İkonları büyüttük */
+    width: 40px;
+    text-align: center;
+    color: var(--primary-color);
+}
+.arama-detay {
+    display: flex;
+    flex-direction: column;
+}
+.arama-detay strong {
+    font-size: 1.1em;
+    color: var(--heading-color);
+}
+.arama-detay small {
+    color: #6c757d;
+}
+.arama-sonuc-item-yok {
+    padding: 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.1em;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Filtreleme Alanı Stilleri */
+.filtre-alani {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    flex-wrap: wrap; /* Küçük ekranlarda alt satıra geçmesi için */
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.filtre-alani select,
+.filtre-alani input[type="date"] {
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 0;
+    flex-grow: 1; /* Esnek büyüme sağlar */
+}
+
+.filtre-alani button {
+    padding: 10px 18px;
+    font-size: 14px;
+    flex-shrink: 0; /* Butonun küçülmesini engeller */
+}

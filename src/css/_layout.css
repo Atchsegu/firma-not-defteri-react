@@ -1,0 +1,52 @@
+/* --- ANA YERLEŞİM STİLLERİ --- */
+
+.sidebar {
+    width: 300px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 25px; /* Padding'i biraz artırdık */
+    justify-content: space-between;
+    transition: width 0.3s ease; /* Genişlik değişimine animasyon ekle */
+}
+
+.sidebar > div:first-child {
+    overflow-y: auto;
+    flex-shrink: 1;
+}
+
+.sidebar-footer {
+    padding-top: 20px; /* Padding'i biraz artırdık */
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px; /* Margin'i biraz artırdık */
+    flex-shrink: 0;
+}
+
+.sidebar-divider { 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    border: 0; 
+    border-top: 1px solid var(--border-color); 
+}
+
+.main-content { 
+    flex-grow: 1; 
+    padding: 40px; /* Daha ferah bir görünüm için padding'i artırdık */
+    overflow-y: auto; 
+    background-color: var(--content-bg);
+    border-left: 1px solid var(--border-color);
+}
+
+.workspace-layout { 
+    display: flex; 
+    gap: 40px; /* Bileşenler arası boşluğu artırdık */
+}
+
+.note-container { 
+    flex: 2; 
+}
+
+.document-container { 
+    flex: 1; 
+}
